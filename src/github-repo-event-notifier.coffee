@@ -94,7 +94,7 @@ module.exports = (robot) ->
       if filter_parts.length > 0
         announceRepoEvent data, eventType, (what, members) ->
           if members?
-            members.forEach (member) -> robot.messageRoom member, what
+            members.forEach (member) -> robot.send {room: member}, what
       else
         console.log "Ignoring #{eventType}:#{data.action} as it's not allowed."
     catch error
