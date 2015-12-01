@@ -3,7 +3,7 @@
 #commit_comment,create,delete,deployment,deployment_status,fork,gollum,issue_comment,issues,member,membership,page_build,pull_request_review_comment,pull_request,push,repository,release,status,ping,team_add,watch
 
 githubSlackMapping =
-  '@nickbuddendotcom': '@nick'
+  'nickbuddendotcom': 'nick'
 
 unique = (array) ->
   output = {}
@@ -19,7 +19,7 @@ extractMentionsFromBody = (body) ->
       slashes is null or slashes.length < 2
 
     mentioned = mentioned.map (nick) ->
-      nick = nick.trim()
+      nick = nick.trim().substr(1)
       if githubSlackMapping[nick]
         githubSlackMapping[nick]
       else
