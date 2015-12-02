@@ -19,7 +19,7 @@ extractMentionsFromBody = (body) ->
       slashes is null or slashes.length < 2
 
     mentioned = mentioned.map (nick) ->
-      nick = nick.trim().substr(1)
+      nick = nick.trim().substr(1).toLowerCase()
       if githubSlackMapping[nick]
         githubSlackMapping[nick]
       else
