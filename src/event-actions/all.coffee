@@ -36,7 +36,7 @@ module.exports =
 
     mentioned = extractMentionsFromBody comment.body
     if mentioned
-      callback "You have been mentioned by #{comment.user.login}
+      callback "#{comment.user.login} mentioned you
       on Commit #{comment.commit_id}: #{comment.body} - #{comment.html_url}", mentioned
     else
       callback()
@@ -53,7 +53,7 @@ module.exports =
 
     mentioned = extractMentionsFromBody comment.body
     if mentioned
-      callback "You have been mentioned on #{issue_pull} \##{issue.number} by
+      callback "#{issue_pull} \##{issue.number} by
       #{comment.user.login}: \"#{comment.body}\" - #{comment.html_url}", mentioned
     else
       callback()
@@ -66,7 +66,7 @@ module.exports =
 
     mentioned = extractMentionsFromBody comment.body
     if mentioned
-      callback "You have been mentioned on Pull Request \"#{comment.body}\" by
+      callback "Pull Request \"#{comment.body}\" by
       #{comment.user.login}: #{comment.html_url}", mentioned
     else
       callback()
