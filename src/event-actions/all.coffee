@@ -3,7 +3,10 @@
 #commit_comment,create,delete,deployment,deployment_status,fork,gollum,issue_comment,issues,member,membership,page_build,pull_request_review_comment,pull_request,push,repository,release,status,ping,team_add,watch
 
 githubSlackMapping =
-  'nickbuddendotcom': 'nick'
+  'nickbuddendotcom': 'nick',
+  'pm5': 'pomin5',
+  'namasayaratih': 'ratih',
+  'EragonJ': 'EragonJ'
 
 unique = (array) ->
   output = {}
